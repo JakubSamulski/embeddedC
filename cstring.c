@@ -2,17 +2,20 @@
 #include<string.h>
 #include <assert.h>
 #include <stdio.h>
+#include <stdbool.h>
+
 typedef struct CString
 {
     size_t size;
-    char *string;
+    char *chars;
 } CString;
 
 CString* cstring_new(const char* str)
 {
     CString *string = malloc(sizeof (CString));
-    string->string = str;
     string->size = strlen(str);
+    string->chars = malloc(string->size);
+    strncpy(string->chars, str, string->size);
     return string;
 }
 
@@ -20,19 +23,20 @@ size_t getSize(CString* string){
     return string->size;
 }
 char getChar(CString* string,int index){
-    return string->string[index];
+    return string->chars[index];
 }
 
 char* getString(CString* string){
-    return string->string;
+    return string->chars;
 }
 
-// wiem ,ze nie udalo mi sie uzyskac zlozonosci o(1)
-void modify(CString *string,int index,char newChar){
-    char temp[getSize(string)];
-    memcpy(temp,string->string, getSize(string)+1 );
-    temp[index] = newChar;
-    string->string = &temp[0];
+bool modify(struct CString *string,int index,char newChar){
+    if(index<string->size){
+        string->chars[index] = newChar;
+        return true;
+    }
+    return false;
+
 }
 
 int main() {
