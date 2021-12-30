@@ -39,15 +39,15 @@ bool modify(struct CString *string,int index,char newChar){
 
 }
 
-int main() {
-
-    CString *cString = cstring_new("Alaa");
-    assert(getSize(cString)== 4);
-    assert(strcmp(getString(cString),"Alaa")==0);
-    assert(getChar(cString,1)=='l');
-
-    modify(cString,1,'e');
-    assert(getSize(cString)==4);
-    assert(strcmp(getString(cString),"Alaa")!=0);
-    assert(strcmp(getString(cString),"Aeaa")==0);
-}
+//int main() {
+//
+//    CString *cString = cstring_new("Alaa");
+//    assert(getSize(cString)== 4);
+//    assert(strcmp(getString(cString),"Alaa")==0);
+//    assert(getChar(cString,1)=='l');
+//
+//    modify(cString,1,'e');
+//    assert(getSize(cString)==4);
+//    assert(strcmp(getString(cString),"Alaa")!=0);
+//    assert(strcmp(getString(cString),"Aeaa")==0);
+//}
