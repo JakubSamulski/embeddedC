@@ -48,7 +48,7 @@ Pair* findPairs(int * array,int sum){
     return res;
 }
 
-Triplet * sumOfThree(int * array, int targetSum){
+Triplet * findTriplets(int * array, int targetSum){
 
     Triplet *result = NULL;
     int* sumsArr = NULL;
@@ -108,6 +108,6 @@ int main(){
     Pair *pairs = findPairs(array,5);
     printPairs(pairs);
 
-//    Triplet *tres = sumOfThree(array,6);
+//    Triplet *tres = findTriplets(array,6);
 //    printTriplets(tres);
 }
