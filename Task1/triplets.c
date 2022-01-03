@@ -96,18 +96,18 @@ void printTriplets(Triplet *triplets)
 }
 
 
-int main(){
-
-    int * array=NULL;
-    array_push(array,1)
-    array_push(array,2)
-    array_push(array,3)
-    array_push(array,4)
-    system("clear");
-
-    Pair *pairs = findPairs(array,5);
-    printPairs(pairs);
-
-//    Triplet *tres = findTriplets(array,6);
-//    printTriplets(tres);
-}
+//int main(){
+//
+//    int * array=NULL;
+//    array_push(array,1)
+//    array_push(array,2)
+//    array_push(array,3)
+//    array_push(array,4)
+//    system("clear");
+//
+//    Pair *pairs = findPairs(array,5);
+//    printPairs(pairs);
+//
+////    Triplet *tres = findTriplets(array,6);
+////    printTriplets(tres);
+//}
